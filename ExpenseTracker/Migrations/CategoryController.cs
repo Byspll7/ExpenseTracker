@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ExpenseTracker.Models;
 
-namespace Expense_Tracker.Controllers
+namespace ExpenseTracker.Migrations
 {
     public class CategoryController : Controller
     {
@@ -75,6 +75,5 @@ namespace Expense_Tracker.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
     }
 }

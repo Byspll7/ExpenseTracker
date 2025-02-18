@@ -1,8 +1,9 @@
 ﻿@model ExpenseTracker.Models.Category
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["PageTitle"] = Model.CategoryId == 0 ? "Create a new category" : "Edit category";
 }
+
 <div class="row">
     <div class="col-md-7">
         <div class="widget p-5">
@@ -31,7 +32,7 @@
                     <span asp-validation-for="Type" class="text-danger"></span>
                 </div>
                 <div class="mb-3">
-                    <button type="button" class="btn btn-success">Create</button>
+                    <button type="button" class="btn btn-success">Submit</button>
                 </div>
             </form>
         </div>
@@ -46,12 +47,12 @@
     <a asp-action="Index" class="btn btn-outline-secondary">Back to List</a>
 </div>
 
-@section Scripts {
+@* @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 }
-
+ *@
 
                     
 
