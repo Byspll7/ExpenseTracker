@@ -26,11 +26,14 @@ namespace ExpenseTracker.Controllers
         }
 
         // GET: Transactions/AddOrEdit
-        public IActionResult AddOrEdit()
+        public IActionResult AddOrEdit(int id = 0)
         {
             PopulateCategories();
-            return View(new Transaction());
-        }
+            if (id == 0)
+                return View(new Transaction());
+            else
+                return View(_context.Transactions.Find(id));
+        } 
 
         // POST: Transactions/AddOrEdit
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -75,3 +78,5 @@ namespace ExpenseTracker.Controllers
 
     }
 }
+
+

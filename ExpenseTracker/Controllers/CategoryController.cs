@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ExpenseTracker.Models;
 
-namespace ExpenseTracker.Migrations
+namespace ExpenseTracker.Controllers
 {
     public class CategoryController : Controller
     {
